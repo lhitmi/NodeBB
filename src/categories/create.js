@@ -102,8 +102,6 @@ module.exports = function (Categories) {
 		if (cloneFromCid) {
 			category = await Categories.copySettingsFrom(cloneFromCid, category.cid, !data.parentCid);
 		}
-		
-
 		if (data.cloneChildren) {
 			await duplicateCategoriesChildren(category.cid, data.cloneFromCid, data.uid);
 		}
